@@ -1,265 +1,158 @@
-# 👤 Personal Information
 
-**Name:** Onkar Jadhav
+<div align="center">
 
-**Role:** Data Engineering Student | Aspiring Data Engineer
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=220&section=header&text=Onkar%20Jadhav&fontSize=50&fontColor=00d4ff&animation=twinkling&fontAlignY=35&desc=Data%20Engineering%20Student%20•%20Future%20Data%20Engineer&descSize=20&descAlignY=55"/>
 
-**Location:** Maharashtra, India
+# 👋 Welcome to My GitHub
 
-**Education:** Final Year Graduate
+### Building expertise in Hadoop, Big Data & Data Engineering
 
-**Current Goal:**
-Become a job-ready Data Engineer within the next 4 months through intensive learning, projects, interview preparation, and practical implementation.
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&style=for-the-badge&color=00d4ff" />
+  <img src="https://img.shields.io/github/followers/YOUR_GITHUB_USERNAME?style=for-the-badge&color=00d4ff" />
+  <img src="https://img.shields.io/github/stars/YOUR_GITHUB_USERNAME?style=for-the-badge&color=00d4ff" />
+</p>
 
----
-
-# 🎯 Professional Summary
-
-Create a concise and impactful introduction that highlights:
-
-* Passion for Big Data and Data Engineering
-* Hands-on learning approach
-* Continuous improvement mindset
-* Interest in distributed systems and large-scale data processing
-* Building projects while learning
+</div>
 
 ---
 
-# 📚 Current Learning Journey
+## 🚀 About Me
 
-I am actively learning:
+I'm a Final Year Graduate and aspiring Data Engineer currently focused on building strong foundations in Big Data technologies.
 
-* Linux (RHEL)
-* Hadoop
-* HDFS
-* MapReduce
-* Hive
-* HBase
-* Sqoop
-* Apache Spark
-* SQL
-* Data Engineering Fundamentals
+### Currently Learning
 
----
+* 🐧 Linux (RHEL & Ubuntu)
+* 🐘 Hadoop Ecosystem
+* 📂 HDFS
+* ⚡ MapReduce
+* 🐝 Hive
+* 📊 HBase
+* 🔄 Sqoop
+* 🚀 Apache Spark
+* 🗄 SQL & Database Design
 
-# 🛠 Technical Skills
+### Career Goal
 
-## Programming & Query Languages
+Become a job-ready Data Engineer within the next 4 months through:
 
-* SQL
-* Basic Python
-* Shell Scripting
-
-## Big Data Technologies
-
-* Hadoop
-* HDFS
-* Hive
-* HBase
-* Sqoop
-* Apache Spark
-
-## Databases
-
-* MySQL
-* HBase
-
-## Operating Systems
-
-* Linux (RHEL)
-* Ubuntu
-
-## Tools & Platforms
-
-* Git
-* GitHub
-* VirtualBox
-* Cloudera
+* Hands-on Projects
+* Real-world Data Pipelines
+* Hadoop Ecosystem Mastery
+* Interview Preparation
+* Open Source Contributions
 
 ---
 
-# 📂 Repository Focus
+## 🛠️ Tech Stack
 
-My GitHub repositories primarily contain:
+<p align="center">
 
-* Linux Notes
-* Linux Command Encyclopedia
-* Hadoop Projects
-* Hive Practice Labs
-* HBase Hands-On Exercises
-* Sqoop Examples
-* Spark Learning Projects
-* Data Engineering Interview Preparation
-* Data Engineering Notes
-* End-to-End Data Engineering Mini Projects
+<img src="https://skillicons.dev/icons?i=linux,bash,python,mysql,git,github,vscode"/>
 
----
+</p>
 
-# 🎨 README STRUCTURE REQUIREMENTS
+<p align="center">
 
-Generate all sections below.
+<img src="https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black"/>
 
----
+<img src="https://img.shields.io/badge/HDFS-FFCC00?style=for-the-badge"/>
 
-## 1️⃣ Animated Hero Header
+<img src="https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black"/>
 
-Use:
+<img src="https://img.shields.io/badge/HBase-CB2027?style=for-the-badge"/>
 
-* Capsule Render Banner
-* Typing SVG Animation
-* Center Alignment
-* Professional Data Engineering Branding
+<img src="https://img.shields.io/badge/Sqoop-0096D6?style=for-the-badge"/>
 
-Include animated text:
+<img src="https://img.shields.io/badge/Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
 
-"Data Engineering Student"
-"Future Data Engineer"
-"Hadoop | Hive | HBase | Spark"
-"Learning. Building. Growing."
+<img src="https://img.shields.io/badge/Cloudera-F96702?style=for-the-badge"/>
+
+</p>
 
 ---
 
-## 2️⃣ Professional Introduction
+## 🗺️ Data Engineering Roadmap
 
-Create a recruiter-friendly introduction explaining:
-
-* Who I am
-* What I am learning
-* What I am building
-* Career objective
-
----
-
-## 3️⃣ About Me
-
-Include:
-
-* Current Focus
-* Learning Journey
-* Career Goal
-* Long-Term Vision
-* Passion for Data Engineering
-
-Use bullet points with icons.
+| Technology | Progress        | Status            |
+| ---------- | --------------- | ----------------- |
+| 🐧 Linux   | ██████████ 100% | Strong Foundation |
+| 🐘 Hadoop  | ████████░░ 80%  | In Progress       |
+| 📂 HDFS    | ████████░░ 80%  | In Progress       |
+| 🐝 Hive    | ██████░░░░ 60%  | Learning          |
+| 📊 HBase   | █████░░░░░ 50%  | Learning          |
+| 🔄 Sqoop   | █████░░░░░ 50%  | Learning          |
+| 🚀 Spark   | ██░░░░░░░░ 20%  | Upcoming          |
+| ☁️ Cloud   | ░░░░░░░░░░ 0%   | Planned           |
 
 ---
 
-## 4️⃣ Tech Stack Section
+## 🏗️ Featured Projects
 
-Create attractive Shields.io badges for:
+| Project                            | Description                                   | Stack            |
+| ---------------------------------- | --------------------------------------------- | ---------------- |
+| 🐧 Linux Command Encyclopedia      | Linux commands, scripts & interview questions | Linux, Bash      |
+| 🐘 Hadoop Learning Journey         | Hadoop concepts and practical implementations | Hadoop, HDFS     |
+| 🐝 Hive Practice Repository        | HiveQL, Partitioning, Bucketing               | Hive             |
+| 📊 HBase Hands-On Lab              | NoSQL practice and HBase operations           | HBase            |
+| 🔄 Sqoop Examples                  | Import & Export examples                      | Sqoop, MySQL     |
+| 🎯 Data Engineering Interview Prep | Questions, answers and notes                  | Hadoop Ecosystem |
 
-### Big Data
+<p align="center">
 
-Linux, Hadoop, HDFS, Hive, HBase, Sqoop, Spark
+<a href="https://github.com/YOUR_GITHUB_USERNAME?tab=repositories">
 
-### Languages
+<img src="https://img.shields.io/badge/View%20All%20Projects-00d4ff?style=for-the-badge"/>
 
-SQL, Python, Bash
+</a>
 
-### Databases
-
-MySQL, HBase
-
-### Tools
-
-Git, GitHub, VirtualBox, Cloudera
-
-Arrange badges neatly.
-
----
-
-## 5️⃣ Data Engineering Roadmap
-
-Create a beautiful roadmap table.
-
-Example:
-
-| Technology | Progress        | Status      |
-| ---------- | --------------- | ----------- |
-| Linux      | ██████████ 100% | Completed   |
-| Hadoop     | ████████░░ 80%  | In Progress |
-| Hive       | ██████░░░░ 60%  | Learning    |
-| HBase      | █████░░░░░ 50%  | Learning    |
-| Sqoop      | ████░░░░░░ 40%  | Learning    |
-| Spark      | ██░░░░░░░░ 20%  | Upcoming    |
-| Cloud      | ░░░░░░░░░░ 0%   | Planned     |
-
-Use emojis.
+</p>
 
 ---
 
-## 6️⃣ Featured Projects
+## 📊 GitHub Analytics
 
-Create visually appealing project cards.
+<p align="center">
 
-Projects:
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical&count_private=true"/>
 
-### Linux Command Encyclopedia
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical"/>
 
-Comprehensive Linux commands and practical examples.
+</p>
 
-### Hadoop Learning Journey
+<p align="center">
 
-Hands-on Hadoop learning repository.
+<img src="https://github-readme-streak-stats.herokuapp.com?user=YOUR_GITHUB_USERNAME&theme=radical"/>
 
-### Hive Practice Repository
-
-HiveQL examples, partitioning, bucketing, optimization.
-
-### HBase Hands-On Lab
-
-NoSQL concepts and practical exercises.
-
-### Data Engineering Interview Preparation
-
-Interview questions and answers.
-
-### Spark Learning Repository
-
-Spark fundamentals and projects.
-
-Use icons and descriptions.
+</p>
 
 ---
 
-## 7️⃣ GitHub Analytics Dashboard
+## 📈 Contribution Activity
 
-Include:
+<p align="center">
 
-### GitHub Stats
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=YOUR_GITHUB_USERNAME&theme=radical"/>
 
-### GitHub Streak
-
-### Top Languages
-
-### Activity Graph
-
-### Profile Summary Card
-
-Arrange in responsive layout.
-
-Use popular GitHub widgets.
+</p>
 
 ---
 
-## 8️⃣ Achievements & Trophies
+## 🏆 GitHub Achievements
 
-Add:
+<p align="center">
 
-* GitHub Trophy Board
-* Learning Milestones
-* Contribution Highlights
+<img src="https://github-profile-trophy.vercel.app/?username=YOUR_GITHUB_USERNAME&theme=radical&row=1&column=7"/>
 
-Use trophy widgets.
+</p>
 
 ---
 
-## 9️⃣ Learning Goals 2026
+## 🎯 Learning Goals 2026
 
-Create checklist:
-
-* [ ] Master Linux
-* [ ] Master Hadoop Ecosystem
+* [ ] Master Linux Administration
+* [ ] Complete Hadoop Ecosystem
 * [ ] Master Hive & HBase
 * [ ] Learn Apache Spark
 * [ ] Build 10 Data Engineering Projects
@@ -270,85 +163,59 @@ Create checklist:
 
 ---
 
-## 🔟 Current Focus
+## 🌐 Connect With Me
 
-Create a dedicated section:
+<p align="center">
 
-Currently Working On:
+<a href="YOUR_LINKEDIN">
 
-* Hadoop Ecosystem
-* Hive Optimization
-* HBase Practice
-* Interview Preparation
-* GitHub Portfolio Development
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 
----
+</a>
 
-## 1️⃣1️⃣ Daily Motivation
+<a href="mailto:YOUR_EMAIL">
 
-Include an inspiring Data Engineering quote.
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
 
-Example:
+</a>
 
-"Data is a precious thing and will last longer than the systems themselves."
+<a href="YOUR_INSTAGRAM">
 
-— Tim Berners-Lee
+<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
 
-Use a quote box.
+</a>
+
+</p>
 
 ---
 
-## 1️⃣2️⃣ Connect With Me
+## 💡 Favorite Quote
 
-Create modern contact section with placeholders:
+> "Without data, you're just another person with an opinion."
 
-* LinkedIn
-* Email
-* Portfolio
-* Instagram
-
-Use attractive icons/badges.
+— W. Edwards Deming
 
 ---
 
-## 1️⃣3️⃣ Visitor Counter
+<div align="center">
 
-Include profile views counter.
+### ⚡ Future Data Engineer in Progress ⚡
 
----
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"/>
 
-## 1️⃣4️⃣ Support Section
+<br><br>
 
-Include:
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=120&section=footer"/>
 
-"⭐ If you find my repositories useful, consider starring them."
+### Made with ❤️ by Onkar Jadhav
 
----
+</div>
 
-## 1️⃣5️⃣ Premium Animated Footer
+For an even more impressive profile, I would also add:
 
-Use animated wave footer.
-
-Professional appearance.
-
----
-
-# 🎯 DESIGN RULES
-
-* Output ONLY valid Markdown.
-* Use center alignment where appropriate.
-* Use modern GitHub README practices.
-* Use SVG animations.
-* Use Shields.io badges extensively.
-* Make the profile recruiter-friendly.
-* Keep mobile responsiveness in mind.
-* Use professional emojis.
-* Maintain clean spacing.
-* Use collapsible sections where useful.
-* Optimize for Data Engineering branding.
-* Ensure all GitHub widgets are properly embedded.
-* README should look premium and production-ready.
-
-Generate the COMPLETE README.md.
-
-A small improvement: once you generate the README, replace placeholder links with your actual GitHub, LinkedIn, email, and Instagram. Recruiters are much more likely to engage when those sections are fully populated rather than left as placeholders.
+* Snake contribution animation
+* LeetCode stats
+* Hadoop/Hive/HBase project screenshots
+* A "Current Learning Progress" section updated weekly
+* Certifications (Coursera, Hadoop, Linux, Cloud)
+* A dedicated "Data Engineering Portfolio" repository pinned at the top of your GitHub profile.
