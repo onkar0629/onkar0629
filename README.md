@@ -33,16 +33,6 @@ I'm a Final Year Graduate and aspiring Data Engineer currently focused on buildi
 * 🚀 Apache Spark
 * 🗄 SQL & Database Design
 
-### Career Goal
-
-Become a job-ready Data Engineer within the next 4 months through:
-
-* Hands-on Projects
-* Real-world Data Pipelines
-* Hadoop Ecosystem Mastery
-* Interview Preparation
-* Open Source Contributions
-
 ---
 
 ## 🛠️ Tech Stack
@@ -163,20 +153,6 @@ Become a job-ready Data Engineer within the next 4 months through:
 <img src="https://github-profile-trophy.vercel.app/?username=onkar0629&theme=radical&row=1&column=7"/>
 
 </p>
-
----
-
-## 🎯 Learning Goals 2026
-
-* [ ] Master Linux Administration
-* [ ] Complete Hadoop Ecosystem
-* [ ] Master Hive & HBase
-* [ ] Learn Apache Spark
-* [ ] Build 10 Data Engineering Projects
-* [ ] Learn Cloud Fundamentals
-* [ ] Contribute to Open Source
-* [ ] Crack Data Engineering Interviews
-* [ ] Secure Data Engineer Role
 
 ---
 
