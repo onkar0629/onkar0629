@@ -8,7 +8,7 @@
       <stop offset="0%" stop-color="#00D4FF"/>
       <stop offset="52%" stop-color="#58A6FF"/>
       <stop offset="100%" stop-color="#7C3AED"/>
-    </linearGradient>
+</linearGradient>
 </defs>
   <rect width="1200" height="80" fill="#0D1117"/>
   <path d="M60 40 H1140" stroke="url(#borderGradient)" stroke-width="3"
