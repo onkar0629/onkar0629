@@ -15,4 +15,4 @@ class AnalyticsGenerator:
     def render(self, metrics: StreakMetrics) -> str:
         """Render the current analytics card."""
 
-        return self.renderer.render_analytics_placeholder(metrics)
+        return self.renderer.render_analytics(metrics)

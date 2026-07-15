@@ -29,136 +29,67 @@ class SvgRenderer:
         self.theme = theme
 
     def render_streak(self, metrics: StreakMetrics) -> str:
-        """Render the custom GitHub streak card."""
+        """Render the custom GitHub streak dashboard card."""
 
-        last_updated = metrics.last_updated.astimezone(timezone.utc).strftime(
-            "%b %d %H:%M UTC"
-        )
+        updated = self._updated(metrics)
         boxes = [
-            MetricBox(
-                "Current Streak",
-                f"{metrics.current_streak} days",
-                64,
-                152,
-                190,
-                self.theme.primary,
-            ),
-            MetricBox(
-                "Longest Streak",
-                f"{metrics.longest_streak} days",
-                270,
-                152,
-                190,
-                self.theme.secondary,
-            ),
-            MetricBox(
-                "Total Contributions",
-                f"{metrics.total_contributions:,}",
-                476,
-                152,
-                220,
-                self.theme.accent,
-            ),
-            MetricBox(
-                "Contributions Today",
-                f"{metrics.contributions_today:,}",
-                712,
-                152,
-                210,
-                self.theme.primary,
-            ),
-            MetricBox(
-                "Last Updated",
-                last_updated,
-                938,
-                152,
-                198,
-                self.theme.secondary,
-            ),
+            MetricBox("Current Streak", f"{metrics.current_streak} days", 64, 148, 206, self.theme.primary),
+            MetricBox("Longest Streak", f"{metrics.longest_streak} days", 292, 148, 206, self.theme.secondary),
+            MetricBox("Today's Contributions", f"{metrics.contributions_today:,}", 520, 148, 228, self.theme.accent),
+            MetricBox("Total Contributions", f"{metrics.total_contributions:,}", 770, 148, 206, self.theme.primary),
+            MetricBox("Updated", updated, 998, 148, 138, self.theme.secondary),
         ]
 
         return self._document(
             width=1200,
             height=300,
             body=f"""
-  <defs>
-    {self._shared_defs()}
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
+  <defs>{self._shared_defs()}{self._glow_def()}</defs>
   <rect width="1200" height="300" rx="28" fill="{self.theme.background}"/>
-  <rect x="1.5" y="1.5" width="1197" height="297" rx="26.5"
-        fill="none" stroke="url(#borderGradient)" stroke-width="3"
-        filter="url(#softGlow)" opacity="0.88"/>
-  {self._grid(1200, 300)}
-  <path d="M48 108 H396 C436 108 436 80 476 80 H676 C716 80 716 108 756 108 H1152"
-        fill="none" stroke="url(#borderGradient)" stroke-width="3"
-        stroke-linecap="round" opacity="0.64">
-    <animate attributeName="stroke-dasharray" values="12 18;22 12;12 18"
-             dur="6s" repeatCount="indefinite"/>
-  </path>
-  <circle cx="48" cy="108" r="5" fill="{self.theme.primary}">
-    <animate attributeName="opacity" values="0.35;1;0.35" dur="3s"
-             repeatCount="indefinite"/>
-  </circle>
-  <circle cx="676" cy="80" r="5" fill="{self.theme.accent}">
-    <animate attributeName="r" values="5;8;5" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1152" cy="108" r="5" fill="{self.theme.secondary}">
-    <animate attributeName="opacity" values="1;0.35;1" dur="3s"
-             repeatCount="indefinite"/>
-  </circle>
-  <text x="64" y="62" font-family="Segoe UI, Arial, sans-serif"
-        font-size="30" font-weight="700" fill="{self.theme.text}">🔥 GITHUB STREAK</text>
-  <text x="66" y="93" font-family="Segoe UI, Arial, sans-serif"
-        font-size="16" fill="{self.theme.muted}">Consistency Builds Excellence</text>
-  <text x="1006" y="66" text-anchor="end"
-        font-family="Segoe UI, Arial, sans-serif" font-size="14"
-        fill="{self.theme.muted}">@{escape(metrics.username)}</text>
-  <text x="1136" y="66" text-anchor="end"
-        font-family="Segoe UI, Arial, sans-serif" font-size="14"
-        fill="{self.theme.secondary}">{escape(metrics.display_name)}</text>
+  <rect x="1.5" y="1.5" width="1197" height="297" rx="26.5" fill="none" stroke="url(#borderGradient)" stroke-width="3" opacity="0.86" filter="url(#glow)"/>
+  {self._grid(1200, 300, step=100)}
+  {self._pipeline(64, 108, 422, 78, 860, 108, 1136)}
+  <text x="64" y="62" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="{self.theme.text}">GITHUB STREAK</text>
+  <text x="66" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="{self.theme.muted}">Consistency Builds Excellence</text>
   {''.join(self._metric_box(box) for box in boxes)}
-  <path d="M64 260 H1136" stroke="url(#borderGradient)" stroke-width="2"
-        stroke-linecap="round" opacity="0.7"/>
-  <text x="64" y="279" font-family="Segoe UI, Arial, sans-serif"
-        font-size="12" fill="{self.theme.muted}">
-    Powered by GitHub GraphQL API • Generated by GitHub Actions
-  </text>
+  <path d="M64 260H1136" stroke="url(#borderGradient)" stroke-width="2" stroke-linecap="round" opacity="0.62"/>
+  <text x="64" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="{self.theme.muted}">Generated daily with GitHub Actions and GitHub GraphQL API</text>
 """,
         )
 
-    def render_analytics_placeholder(self, metrics: StreakMetrics) -> str:
-        """Render a lightweight analytics card for the initial engine."""
+    def render_analytics(self, metrics: StreakMetrics) -> str:
+        """Render the custom GitHub analytics dashboard card."""
+
+        updated = self._updated(metrics)
+        boxes = [
+            MetricBox("Repositories", f"{metrics.repositories:,}", 64, 148, 148, self.theme.primary),
+            MetricBox("Followers", f"{metrics.followers:,}", 228, 148, 148, self.theme.secondary),
+            MetricBox("Following", f"{metrics.following:,}", 392, 148, 148, self.theme.accent),
+            MetricBox("Stars", f"{metrics.stars:,}", 556, 148, 148, self.theme.primary),
+            MetricBox("Commits", f"{metrics.commits:,}", 720, 148, 148, self.theme.secondary),
+            MetricBox("Contributions", f"{metrics.total_contributions:,}", 884, 148, 252, self.theme.accent),
+        ]
 
         return self._document(
             width=1200,
-            height=260,
+            height=360,
             body=f"""
-  <defs>{self._shared_defs()}</defs>
-  <rect width="1200" height="260" rx="24" fill="{self.theme.background}"/>
-  <rect x="1.5" y="1.5" width="1197" height="257" rx="22.5"
-        fill="none" stroke="url(#borderGradient)" stroke-width="3" opacity="0.82"/>
-  {self._grid(1200, 260)}
-  <text x="64" y="72" font-family="Segoe UI, Arial, sans-serif"
-        font-size="28" font-weight="700" fill="{self.theme.text}">GITHUB ANALYTICS</text>
-  <text x="66" y="104" font-family="Segoe UI, Arial, sans-serif"
-        font-size="16" fill="{self.theme.muted}">Contribution intelligence for @{escape(metrics.username)}</text>
-  <text x="64" y="170" font-family="Segoe UI, Arial, sans-serif"
-        font-size="54" font-weight="700" fill="{self.theme.primary}">{metrics.total_contributions:,}</text>
-  <text x="66" y="202" font-family="Segoe UI, Arial, sans-serif"
-        font-size="16" fill="{self.theme.muted}">contributions in the tracked window</text>
-  <path d="M520 190 C640 90 760 220 900 120 S1070 110 1136 72"
-        fill="none" stroke="url(#borderGradient)" stroke-width="5"
-        stroke-linecap="round">
-    <animate attributeName="opacity" values="0.55;1;0.55" dur="5s"
-             repeatCount="indefinite"/>
-  </path>
+  <defs>{self._shared_defs()}{self._glow_def()}</defs>
+  <rect width="1200" height="360" rx="28" fill="{self.theme.background}"/>
+  <rect x="1.5" y="1.5" width="1197" height="357" rx="26.5" fill="none" stroke="url(#borderGradient)" stroke-width="3" opacity="0.86" filter="url(#glow)"/>
+  {self._grid(1200, 360, step=96)}
+  {self._pipeline(64, 112, 404, 82, 860, 112, 1136)}
+  <text x="64" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="{self.theme.text}">GITHUB ANALYTICS</text>
+  <text x="66" y="94" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="{self.theme.muted}">Repository signal and contribution overview</text>
+  {''.join(self._metric_box(box) for box in boxes)}
+  <g>
+    <rect x="64" y="248" width="1072" height="58" rx="16" fill="{self.theme.background}" stroke="{self.theme.secondary}" stroke-width="1.2" opacity="0.96"/>
+    <rect x="64" y="248" width="1072" height="58" rx="16" fill="{self.theme.secondary}" opacity="0.05"/>
+    <text x="88" y="283" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="{self.theme.muted}">Last Updated</text>
+    <text x="240" y="284" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="{self.theme.text}">{escape(updated)}</text>
+    <text x="934" y="284" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="{self.theme.muted}">GitHub GraphQL API only</text>
+  </g>
+  <path d="M64 328H1136" stroke="url(#borderGradient)" stroke-width="2" stroke-linecap="round" opacity="0.62"/>
 """,
         )
 
@@ -223,22 +154,55 @@ class SvgRenderer:
       <stop offset="0%" stop-color="{self.theme.primary}"/>
       <stop offset="52%" stop-color="{self.theme.secondary}"/>
       <stop offset="100%" stop-color="{self.theme.accent}"/>
-    </linearGradient>
+</linearGradient>
 """
 
-    def _grid(self, width: int, height: int) -> str:
+    @staticmethod
+    def _glow_def() -> str:
+        return """
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+"""
+
+    def _grid(self, width: int, height: int, step: int = 80) -> str:
         vertical = "\n".join(
-            f'    <path d="M{x} 0 V{height}"/>' for x in range(80, width, 80)
+            f'    <path d="M{x} 0 V{height}"/>' for x in range(step, width, step)
         )
         horizontal = "\n".join(
-            f'    <path d="M0 {y} H{width}"/>' for y in range(40, height, 40)
+            f'    <path d="M0 {y} H{width}"/>' for y in range(step // 2, height, step // 2)
         )
         return f"""
-  <g opacity="0.08" stroke="{self.theme.muted}" stroke-width="1">
+  <g opacity="0.07" stroke="{self.theme.muted}" stroke-width="1">
 {horizontal}
 {vertical}
   </g>
 """
+
+    def _pipeline(
+        self,
+        start_x: int,
+        start_y: int,
+        bend_x: int,
+        bend_y: int,
+        final_x: int,
+        final_y: int,
+        end_x: int,
+    ) -> str:
+        return f"""
+  <path d="M{start_x} {start_y}H{bend_x - 80}C{bend_x - 40} {start_y} {bend_x - 40} {bend_y} {bend_x} {bend_y}H{final_x - 80}C{final_x - 40} {bend_y} {final_x - 40} {final_y} {final_x} {final_y}H{end_x}" fill="none" stroke="url(#borderGradient)" stroke-width="3" stroke-linecap="round" opacity="0.72"/>
+  <circle cx="{start_x}" cy="{start_y}" r="6" fill="{self.theme.primary}"/>
+  <circle cx="{bend_x}" cy="{bend_y}" r="6" fill="{self.theme.secondary}"/>
+  <circle cx="{final_x}" cy="{final_y}" r="6" fill="{self.theme.accent}"/>
+"""
+
+    @staticmethod
+    def _updated(metrics: StreakMetrics) -> str:
+        return metrics.last_updated.astimezone(timezone.utc).strftime("%b %d %H:%M UTC")
 
     @staticmethod
     def _document(width: int, height: int, body: str) -> str:

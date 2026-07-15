@@ -1,11 +1,24 @@
 """GraphQL queries used by the profile engine."""
 
-CONTRIBUTIONS_QUERY = """
-query Contributions($login: String!, $from: DateTime!, $to: DateTime!) {
+PROFILE_QUERY = """
+query Profile($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     login
     name
+    followers {
+      totalCount
+    }
+    following {
+      totalCount
+    }
+    repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
+      totalCount
+      nodes {
+        stargazerCount
+      }
+    }
     contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions
       contributionCalendar {
         totalContributions
         weeks {

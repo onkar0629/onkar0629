@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta, timezone
 from typing import TYPE_CHECKING, Any
 
-from generator.github_queries import CONTRIBUTIONS_QUERY
+from generator.github_queries import PROFILE_QUERY
 
 if TYPE_CHECKING:
     from generator.github_client import GitHubClient
@@ -30,6 +30,11 @@ class StreakMetrics:
     longest_streak: int
     total_contributions: int
     contributions_today: int
+    repositories: int
+    followers: int
+    following: int
+    stars: int
+    commits: int
     last_updated: datetime
     from_date: date
     to_date: date
@@ -50,7 +55,7 @@ class StreakGenerator:
         from_date = to_date - timedelta(days=lookback_days)
 
         data = self.client.execute(
-            CONTRIBUTIONS_QUERY,
+            PROFILE_QUERY,
             {
                 "login": self.username,
                 "from": self._date_time(from_date),
@@ -63,8 +68,11 @@ class StreakGenerator:
             raise RuntimeError(f"GitHub user '{self.username}' was not found.")
 
         calendar = user["contributionsCollection"]["contributionCalendar"]
+        collection = user["contributionsCollection"]
+        repositories = user["repositories"]
         days = self._parse_days(calendar["weeks"])
         days_by_date = {item.day: item.count for item in days}
+        repository_nodes = repositories.get("nodes") or []
 
         return StreakMetrics(
             username=user["login"],
@@ -73,6 +81,11 @@ class StreakGenerator:
             longest_streak=self._longest_streak(days),
             total_contributions=int(calendar["totalContributions"]),
             contributions_today=int(days_by_date.get(to_date, 0)),
+            repositories=int(repositories["totalCount"]),
+            followers=int(user["followers"]["totalCount"]),
+            following=int(user["following"]["totalCount"]),
+            stars=sum(int(repo.get("stargazerCount", 0)) for repo in repository_nodes),
+            commits=int(collection["totalCommitContributions"]),
             last_updated=now,
             from_date=from_date,
             to_date=to_date,
