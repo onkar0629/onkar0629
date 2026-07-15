@@ -3,28 +3,25 @@
 </p>
 
 ---
+<h1 align="center">👋 Welcome to My GitHub</h1>
 
-# 👋 Welcome to My GitHub
+<h3 align="center">
+Aspiring Data Engineer | Building scalable data solutions with SQL, Python, Azure & Big Data
+</h3>
 
-### Building expertise in SQL , Azure , Big Data & Data Engineering
+<p align="center">
+  <em>Learning today. Building tomorrow.</em>
+</p>
 
 ---
 
 ## 🚀 About Me
 
-I'm a Final Year Graduate and aspiring Data Engineer currently focused on building strong foundations in Big Data technologies.
+I'm **Onkar Jadhav**, an aspiring **Data Engineer** focused on building a strong foundation in **SQL, Linux, Big Data, and Microsoft Azure**.
 
-### Currently Learning
+I enjoy learning new technologies, solving data-related problems, and building practical projects that reflect real-world data engineering workflows.
 
-* 🐧 Linux (RHEL & Ubuntu)
-* 🐘 Hadoop Ecosystem
-* 📂 HDFS
-* ⚡ MapReduce
-* 🐝 Hive
-* 📊 HBase
-* 🔄 Sqoop
-* 🚀 Apache Spark
-* 🗄 SQL & Database Design
+My goal is to create production-ready data engineering solutions and continuously grow through hands-on learning.
 
 ---
 
@@ -151,14 +148,6 @@ src="https://raw.githubusercontent.com/onkar0629/onkar0629/output/github-contrib
 </a>
 
 </p>
-
----
-
-## 💡 Favorite Quote
-
-> "Without data, you're just another person with an opinion."
-
-— W. Edwards Deming
 
 ---
 
