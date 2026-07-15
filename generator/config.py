@@ -1,7 +1,9 @@
+from dotenv import load_dotenv
 import os
 
-GITHUB_USERNAME = "onkar0629"
+load_dotenv()
 
-GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
-
+GITHUB_USERNAME = os.getenv("GITHUB_USERNAME")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+
+GRAPHQL_URL = "https://api.github.com/graphql"
