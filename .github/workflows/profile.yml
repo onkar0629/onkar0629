@@ -1,6 +1,13 @@
 name: Generate Profile Assets
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/profile.yml"
+      - "generator/**"
+      - "requirements.txt"
   schedule:
     - cron: "15 0 * * *"
   workflow_dispatch:
