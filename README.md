@@ -96,29 +96,6 @@ I'm a Final Year Graduate and aspiring Data Engineer currently focused on buildi
 
 ---
 
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=onkar0629&show_icons=true&theme=radical" />
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=onkar0629&layout=compact&theme=radical" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=onkar0629&theme=radical" />
-</p>
-
----
-
-## 📈 Contribution Activity
-
-<p align="center">
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=onkar0629&theme=radical"/>
-
-</p>
-
----
-
 ## 🐍 Contribution Snake
 
 <p align="center">
@@ -139,6 +116,14 @@ src="https://raw.githubusercontent.com/onkar0629/onkar0629/output/github-contrib
 
 </picture>
 
+</p>
+
+---
+
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=onkar0629&theme=radical" />
 </p>
 
 ---
