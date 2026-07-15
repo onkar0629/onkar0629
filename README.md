@@ -108,14 +108,28 @@ Production-ready Data Engineering projects are under development.
   <img src="assets/divider.svg" width="100%" alt="">
 </p>
 
-## Connect
+## Connect With Me
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/onkar-jadhav-oj0629/">LinkedIn</a>
-  &nbsp;|&nbsp;
-  <a href="mailto:jadhavonkar0629@gmail.com">Email</a>
-  &nbsp;|&nbsp;
-  <a href="https://www.instagram.com/_jadhav_onkar?igsh=MWRzd21qMTFzbHpsMQ==">Instagram</a>
+
+<a href="https://www.linkedin.com/in/onkar-jadhav-oj0629/)">
+
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+
+</a>
+
+<a href="mailto:jadhavonkar0629@gmail.com">
+
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+
+</a>
+
+<a href="https://www.instagram.com/_jadhav_onkar?igsh=MWRzd21qMTFzbHpsMQ==">
+
+<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+
+</a>
+
 </p>
 
 <p align="center">
@@ -137,5 +151,5 @@ Production-ready Data Engineering projects are under development.
 ## Footer
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="Made with GitHub Actions by Onkar Jadhav">
+  <img src="assets/footer.svg" width="100%" alt="Made with by Onkar Jadhav">
 </p>
