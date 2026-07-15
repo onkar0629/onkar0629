@@ -193,8 +193,22 @@ class SvgRenderer:
         final_y: int,
         end_x: int,
     ) -> str:
+        path = (
+            f"M{start_x} {start_y}H{bend_x - 80}"
+            f"C{bend_x - 40} {start_y} {bend_x - 40} {bend_y} {bend_x} {bend_y}"
+            f"H{final_x - 80}"
+            f"C{final_x - 40} {bend_y} {final_x - 40} {final_y} {final_x} {final_y}"
+            f"H{end_x}"
+        )
         return f"""
-  <path d="M{start_x} {start_y}H{bend_x - 80}C{bend_x - 40} {start_y} {bend_x - 40} {bend_y} {bend_x} {bend_y}H{final_x - 80}C{final_x - 40} {bend_y} {final_x - 40} {final_y} {final_x} {final_y}H{end_x}" fill="none" stroke="url(#borderGradient)" stroke-width="3" stroke-linecap="round" opacity="0.72"/>
+  <path d="{path}" fill="none" stroke="url(#borderGradient)" stroke-width="3" stroke-linecap="round" opacity="0.72"
+        stroke-dasharray="18 14">
+    <animate attributeName="stroke-dashoffset" values="0;-64" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <circle r="5" fill="{self.theme.primary}" filter="url(#glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="{path}"/>
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="7s" repeatCount="indefinite"/>
+  </circle>
   <circle cx="{start_x}" cy="{start_y}" r="6" fill="{self.theme.primary}"/>
   <circle cx="{bend_x}" cy="{bend_y}" r="6" fill="{self.theme.secondary}"/>
   <circle cx="{final_x}" cy="{final_y}" r="6" fill="{self.theme.accent}"/>

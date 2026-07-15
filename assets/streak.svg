@@ -41,7 +41,14 @@
   </g>
 
   
-  <path d="M64 108H342C382 108 382 78 422 78H780C820 78 820 108 860 108H1136" fill="none" stroke="url(#borderGradient)" stroke-width="3" stroke-linecap="round" opacity="0.72"/>
+  <path d="M64 108H342C382 108 382 78 422 78H780C820 78 820 108 860 108H1136" fill="none" stroke="url(#borderGradient)" stroke-width="3" stroke-linecap="round" opacity="0.72"
+        stroke-dasharray="18 14">
+    <animate attributeName="stroke-dashoffset" values="0;-64" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <circle r="5" fill="#00D4FF" filter="url(#glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M64 108H342C382 108 382 78 422 78H780C820 78 820 108 860 108H1136"/>
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="7s" repeatCount="indefinite"/>
+  </circle>
   <circle cx="64" cy="108" r="6" fill="#00D4FF"/>
   <circle cx="422" cy="78" r="6" fill="#58A6FF"/>
   <circle cx="860" cy="108" r="6" fill="#7C3AED"/>
@@ -106,7 +113,7 @@
     <text x="1018" y="178" font-family="Segoe UI, Arial, sans-serif"
           font-size="13" fill="#8B949E">Updated</text>
     <text x="1018" y="210" font-family="Segoe UI, Arial, sans-serif"
-          font-size="19" font-weight="700" fill="#F8FAFC">Jul 15 14:52 UTC</text>
+          font-size="19" font-weight="700" fill="#F8FAFC">Jul 15 15:02 UTC</text>
   </g>
 
   <path d="M64 260H1136" stroke="url(#borderGradient)" stroke-width="2" stroke-linecap="round" opacity="0.62"/>
