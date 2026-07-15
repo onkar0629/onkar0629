@@ -1,16 +1,9 @@
-from github_api import GitHubAPI
+from client import GitHubClient
+from queries import VIEWER_QUERY
 
-query = """
-{
-  viewer {
-    login
-    name
-  }
-}
-"""
 
-api = GitHubAPI()
+client = GitHubClient()
 
-response = api.query(query)
+result = client.execute(VIEWER_QUERY)
 
-print(response)
+print(result)
