@@ -58,7 +58,7 @@ def _github_username() -> str:
 def load_settings() -> Settings:
     """Load validated settings for local runs and GitHub Actions."""
 
-    token = os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
+    token = os.getenv("PROFILE_TOKEN") or os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
     if not token:
         raise RuntimeError(
             "GITHUB_TOKEN is required. In GitHub Actions, pass "

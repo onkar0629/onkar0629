@@ -34,7 +34,8 @@ jobs:
 
       - name: Generate SVG assets
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           GITHUB_USERNAME: onkar0629
         run: python -m generator.main
 
