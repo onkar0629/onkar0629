@@ -1,247 +1,83 @@
-<svg width="1280" height="320" viewBox="0 0 1280 320" xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-
-<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#0D1117"/>
-<stop offset="50%" stop-color="#111827"/>
-<stop offset="100%" stop-color="#0D1117"/>
-</linearGradient>
-
-<linearGradient id="line" x1="0%" x2="100%">
-<stop offset="0%" stop-color="#00D4FF"/>
-<stop offset="100%" stop-color="#7C3AED"/>
-</linearGradient>
-
-<linearGradient id="title" x1="0%" x2="100%">
-<stop offset="0%" stop-color="#00D4FF"/>
-<stop offset="100%" stop-color="#58A6FF"/>
-</linearGradient>
-
-<filter id="glow">
-<feGaussianBlur stdDeviation="3" result="blur"/>
-<feMerge>
-<feMergeNode in="blur"/>
-<feMergeNode in="SourceGraphic"/>
-</feMerge>
-</filter>
-
-</defs>
-
-<!-- Background -->
-
-<rect width="1280" height="320" fill="url(#bg)"/>
-
-<!-- Grid -->
-
-<g opacity="0.07">
-
-<path d="M0 40H1280"/>
-<path d="M0 80H1280"/>
-<path d="M0 120H1280"/>
-<path d="M0 160H1280"/>
-<path d="M0 200H1280"/>
-<path d="M0 240H1280"/>
-<path d="M0 280H1280"/>
-
-<path d="M80 0V320"/>
-<path d="M160 0V320"/>
-<path d="M240 0V320"/>
-<path d="M320 0V320"/>
-<path d="M400 0V320"/>
-<path d="M480 0V320"/>
-<path d="M560 0V320"/>
-<path d="M640 0V320"/>
-<path d="M720 0V320"/>
-<path d="M800 0V320"/>
-<path d="M880 0V320"/>
-<path d="M960 0V320"/>
-<path d="M1040 0V320"/>
-<path d="M1120 0V320"/>
-<path d="M1200 0V320"/>
-
-</g>
-
-<!-- Pipeline -->
-
-<path
-d="M760 160
-L910 160
-L980 90
-L1130 90"
-stroke="url(#line)"
-stroke-width="4"
-fill="none"
-stroke-linecap="round"/>
-
-<path
-d="M760 160
-L910 160
-L980 230
-L1130 230"
-stroke="url(#line)"
-stroke-width="4"
-fill="none"
-stroke-linecap="round"/>
-
-<!-- Flowing Particles -->
-
-<circle r="5" fill="#00D4FF">
-
-<animateMotion
-dur="6s"
-repeatCount="indefinite"
-path="M760 160 L910 160 L980 90 L1130 90"/>
-
-</circle>
-
-<circle r="5" fill="#7C3AED">
-
-<animateMotion
-dur="8s"
-repeatCount="indefinite"
-path="M760 160 L910 160 L980 230 L1130 230"/>
-
-</circle>
-
-<!-- Nodes -->
-
-<g filter="url(#glow)">
-
-<circle cx="760" cy="160" r="11" fill="#00D4FF">
-<animate attributeName="r" values="11;14;11" dur="2.5s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="910" cy="160" r="11" fill="#58A6FF">
-<animate attributeName="r" values="11;14;11" dur="3s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="980" cy="90" r="11" fill="#7C3AED">
-<animate attributeName="r" values="11;14;11" dur="2s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="980" cy="230" r="11" fill="#00D4FF">
-<animate attributeName="r" values="11;14;11" dur="2.8s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="1130" cy="90" r="11" fill="#58A6FF">
-<animate attributeName="r" values="11;14;11" dur="2.2s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="1130" cy="230" r="11" fill="#7C3AED">
-<animate attributeName="r" values="11;14;11" dur="2.7s" repeatCount="indefinite"/>
-</circle>
-
-</g>
-
-<!-- Labels -->
-
-<text
-x="1145"
-y="95"
-font-size="16"
-fill="#94A3B8"
-font-family="Segoe UI,Arial">
-Azure
-</text>
-
-<text
-x="1145"
-y="235"
-font-size="16"
-fill="#94A3B8"
-font-family="Segoe UI,Arial">
-Spark
-</text>
-
-<text
-x="720"
-y="188"
-font-size="16"
-fill="#94A3B8"
-font-family="Segoe UI,Arial">
-SQL
-</text>
-
-<!-- Main Title -->
-
-<text
-x="80"
-y="120"
-font-size="52"
-font-weight="700"
-fill="url(#title)"
-font-family="Segoe UI,Arial">
-
-Onkar Jadhav
-
-<animate
-attributeName="opacity"
-values="0.85;1;0.85"
-dur="4s"
-repeatCount="indefinite"/>
-
-</text>
-
-<!-- Subtitle -->
-
-<text
-x="82"
-y="160"
-font-size="28"
-fill="#FFFFFF"
-font-family="Segoe UI,Arial">
-
-DATA ENGINEER
-
-</text>
-
-<!-- Tagline -->
-
-<text
-x="82"
-y="198"
-font-size="18"
-fill="#94A3B8"
-font-family="Segoe UI,Arial">
-
-Building scalable data pipelines
-
-</text>
-
-<!-- Skills -->
-
-<text
-x="82"
-y="245"
-font-size="18"
-fill="#58A6FF"
-font-family="Segoe UI,Arial">
-
-SQL • Python • Azure • Spark • Linux
-
-</text>
-
-<!-- Floating Particles -->
-
-<g opacity="0.45">
-
-<circle cx="120" cy="40" r="2" fill="#00D4FF">
-<animate attributeName="cy" values="40;20;40" dur="4s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="350" cy="270" r="2" fill="#7C3AED">
-<animate attributeName="cy" values="270;250;270" dur="5s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="620" cy="60" r="2" fill="#00D4FF">
-<animate attributeName="cy" values="60;35;60" dur="6s" repeatCount="indefinite"/>
-</circle>
-
-<circle cx="1180" cy="280" r="2" fill="#58A6FF">
-<animate attributeName="cy" values="280;255;280" dur="4.5s" repeatCount="indefinite"/>
-</circle>
-
-</g>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="title desc">
+  <title id="title">Onkar Jadhav GitHub Banner</title>
+  <desc id="desc">Dark GitHub style animated banner for Onkar Jadhav.</desc>
+  <defs>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="52%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#58A6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="320" fill="#0D1117"/>
+  <g opacity="0.08" stroke="#8B949E" stroke-width="1">
+    <path d="M0 40H1280"/>
+    <path d="M0 80H1280"/>
+    <path d="M0 120H1280"/>
+    <path d="M0 160H1280"/>
+    <path d="M0 200H1280"/>
+    <path d="M0 240H1280"/>
+    <path d="M0 280H1280"/>
+    <path d="M80 0V320"/>
+    <path d="M160 0V320"/>
+    <path d="M240 0V320"/>
+    <path d="M320 0V320"/>
+    <path d="M400 0V320"/>
+    <path d="M480 0V320"/>
+    <path d="M560 0V320"/>
+    <path d="M640 0V320"/>
+    <path d="M720 0V320"/>
+    <path d="M800 0V320"/>
+    <path d="M880 0V320"/>
+    <path d="M960 0V320"/>
+    <path d="M1040 0V320"/>
+    <path d="M1120 0V320"/>
+    <path d="M1200 0V320"/>
+  </g>
+  <path d="M760 160 L910 160 L980 90 L1130 90" stroke="url(#line)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M760 160 L910 160 L980 230 L1130 230" stroke="url(#line)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle r="5" fill="#00D4FF">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M760 160 L910 160 L980 90 L1130 90"/>
+  </circle>
+  <circle r="5" fill="#7C3AED">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M760 160 L910 160 L980 230 L1130 230"/>
+  </circle>
+  <g filter="url(#glow)">
+    <circle cx="760" cy="160" r="11" fill="#00D4FF">
+      <animate attributeName="r" values="11;14;11" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="910" cy="160" r="11" fill="#58A6FF">
+      <animate attributeName="r" values="11;14;11" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="90" r="11" fill="#7C3AED">
+      <animate attributeName="r" values="11;14;11" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="230" r="11" fill="#00D4FF">
+      <animate attributeName="r" values="11;14;11" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1130" cy="90" r="11" fill="#58A6FF">
+      <animate attributeName="r" values="11;14;11" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1130" cy="230" r="11" fill="#7C3AED">
+      <animate attributeName="r" values="11;14;11" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="1145" y="95" font-size="16" fill="#8B949E" font-family="Segoe UI, Arial, sans-serif">Azure</text>
+  <text x="1145" y="235" font-size="16" fill="#8B949E" font-family="Segoe UI, Arial, sans-serif">Spark</text>
+  <text x="720" y="188" font-size="16" fill="#8B949E" font-family="Segoe UI, Arial, sans-serif">SQL</text>
+  <text x="80" y="120" font-size="52" font-weight="700" fill="url(#titleGradient)" font-family="Segoe UI, Arial, sans-serif">Onkar Jadhav</text>
+  <text x="82" y="160" font-size="28" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif">DATA ENGINEER</text>
+  <text x="82" y="198" font-size="18" fill="#8B949E" font-family="Segoe UI, Arial, sans-serif">Building scalable data pipelines</text>
+  <text x="82" y="245" font-size="18" fill="#58A6FF" font-family="Segoe UI, Arial, sans-serif">SQL • Python • Azure • Spark • Linux</text>
 </svg>

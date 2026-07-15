@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="140" viewBox="0 0 1200 140" role="img" aria-labelledby="title desc">
+  <title id="title">Onkar Jadhav GitHub Profile Asset</title>
+  <desc id="desc">Generated SVG asset for the onkar0629 GitHub profile.</desc>
+
+  <defs>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="52%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="140" fill="#0D1117"/>
+  <path d="M0 96 C220 42 360 142 560 86 S900 42 1200 92 V140 H0 Z"
+        fill="#7C3AED" opacity="0.24"/>
+  <path d="M0 104 C240 50 410 132 610 78 S940 58 1200 102"
+        fill="none" stroke="#00D4FF" stroke-width="3" opacity="0.82"/>
+  <text x="600" y="54" text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif" font-size="22"
+        font-weight="700" fill="#F8FAFC">Made with GitHub Actions by Onkar Jadhav</text>
+  <text x="600" y="82" text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif" font-size="14"
+        fill="#8B949E">Learning today. Building tomorrow.</text>
+
+</svg>

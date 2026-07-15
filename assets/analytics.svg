@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Onkar Jadhav GitHub Profile Asset</title>
+  <desc id="desc">Generated SVG asset for the onkar0629 GitHub profile.</desc>
+
+  <defs>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="52%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="260" rx="24" fill="#0D1117"/>
+  <rect x="1.5" y="1.5" width="1197" height="257" rx="22.5"
+        fill="none" stroke="url(#borderGradient)" stroke-width="3" opacity="0.82"/>
+  
+  <g opacity="0.08" stroke="#8B949E" stroke-width="1">
+    <path d="M0 40 H1200"/>
+    <path d="M0 80 H1200"/>
+    <path d="M0 120 H1200"/>
+    <path d="M0 160 H1200"/>
+    <path d="M0 200 H1200"/>
+    <path d="M0 240 H1200"/>
+    <path d="M80 0 V260"/>
+    <path d="M160 0 V260"/>
+    <path d="M240 0 V260"/>
+    <path d="M320 0 V260"/>
+    <path d="M400 0 V260"/>
+    <path d="M480 0 V260"/>
+    <path d="M560 0 V260"/>
+    <path d="M640 0 V260"/>
+    <path d="M720 0 V260"/>
+    <path d="M800 0 V260"/>
+    <path d="M880 0 V260"/>
+    <path d="M960 0 V260"/>
+    <path d="M1040 0 V260"/>
+    <path d="M1120 0 V260"/>
+  </g>
+
+  <text x="64" y="72" font-family="Segoe UI, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#F8FAFC">GITHUB ANALYTICS</text>
+  <text x="66" y="104" font-family="Segoe UI, Arial, sans-serif"
+        font-size="16" fill="#8B949E">Contribution intelligence for @onkar0629</text>
+  <text x="64" y="170" font-family="Segoe UI, Arial, sans-serif"
+        font-size="54" font-weight="700" fill="#00D4FF">0</text>
+  <text x="66" y="202" font-family="Segoe UI, Arial, sans-serif"
+        font-size="16" fill="#8B949E">contributions in the tracked window</text>
+  <path d="M520 190 C640 90 760 220 900 120 S1070 110 1136 72"
+        fill="none" stroke="url(#borderGradient)" stroke-width="5"
+        stroke-linecap="round">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="5s"
+             repeatCount="indefinite"/>
+  </path>
+
+</svg>
