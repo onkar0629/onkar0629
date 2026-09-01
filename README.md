@@ -74,26 +74,6 @@ Production-ready Data Engineering projects are under development.
   <img src="assets/divider.svg" width="100%" alt="">
 </p>
 
-## GitHub Analytics
-
-<p align="center">
-  <img src="assets/analytics.svg" width="100%" alt="GitHub analytics dashboard">
-</p>
-
-<p align="center">
-  <img src="assets/divider.svg" width="100%" alt="">
-</p>
-
-## GitHub Streak
-
-<p align="center">
-  <img src="assets/streak.svg" width="100%" alt="GitHub streak dashboard">
-</p>
-
-<p align="center">
-  <img src="assets/divider.svg" width="100%" alt="">
-</p>
-
 ## Contribution Snake
 
 <p align="center">
